@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:layout_weight="1"
@@ -21,13 +20,6 @@
             android:padding="5dp"
             android:text="Que sensores tengo?" />
 
-        <Button
-            android:id="@+id/limpia"
-            android:layout_width="0dp"
-            android:layout_height="fill_parent"
-            android:layout_weight="1"
-            android:padding="5dp"
-            android:text="Limpia" />
     </LinearLayout>
 
     <ScrollView
@@ -43,49 +35,86 @@
             android:orientation="vertical" >
 
             <TextView
-                android:id="@+id/detecta"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content" />
-
-            <TextView
                 android:id="@+id/acelerometro"
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:onClick="infoAcelerometro"/>
 
             <TextView
                 android:id="@+id/gravedad"
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:onClick="infoGravedad"/>
 
             <TextView
                 android:id="@+id/giro"
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:onClick="infoGiro"/>
 
             <TextView
                 android:id="@+id/magnetic"
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:onClick="infoMagnetic"/>
 
             <TextView
                 android:id="@+id/proximity"
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:onClick="infoProximity"/>
 
             <TextView
                 android:id="@+id/luminosidad"
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:onClick="infoIluminosidad"/>
 
             <TextView
                 android:id="@+id/temperatura"
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:onClick="infoTemperatura"/>
 
             <TextView
                 android:id="@+id/presion"
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:onClick="infoPresion"/>
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Brujula"
+                android:textAlignment="center"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/txtAngle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="40dp"
+                android:layout_marginTop="20dp"
+                android:text="Heading: 0.0" />
+
+            <ImageView
+                android:id="@+id/imgViewCompass"
+                android:layout_width="match_parent"
+                android:layout_height="209dp"
+                android:layout_below="@+id/txtAngle"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/flecha" />
+
         </LinearLayout>
     </ScrollView>
 
